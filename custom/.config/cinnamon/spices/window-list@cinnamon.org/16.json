@@ -1,0 +1,108 @@
+{
+    "section1": {
+        "type": "section",
+        "description": "Behavior"
+    },
+    "show-all-workspaces": {
+        "type": "switch",
+        "default": false,
+        "description": "Show windows from all workspaces",
+        "value": false
+    },
+    "enable-alerts": {
+        "type": "switch",
+        "default": true,
+        "description": "Show an alert in the window list when a window from another workspace requires attention",
+        "value": true
+    },
+    "enable-scrolling": {
+        "type": "switch",
+        "default": false,
+        "description": "Enable mouse-wheel scrolling in the window list",
+        "value": false
+    },
+    "reverse-scrolling": {
+        "type": "switch",
+        "default": false,
+        "description": "Reverse the direction of mouse-wheel scrolling in the window list",
+        "dependency": "enable-scrolling",
+        "value": false
+    },
+    "left-click-minimize": {
+        "type": "switch",
+        "default": true,
+        "description": "Left click to minimize window",
+        "value": true
+    },
+    "middle-click-close": {
+        "type": "switch",
+        "default": true,
+        "description": "Middle click to close window",
+        "value": true
+    },
+    "section2": {
+        "type": "section",
+        "description": "Display"
+    },
+    "panel-show-label": {
+        "type": "switch",
+        "default": true,
+        "description": "Show window names in the panel",
+        "value": false
+    },
+    "button-width": {
+        "type": "spinbutton",
+        "default": 150,
+        "min": 0,
+        "max": 1000,
+        "step": 5,
+        "units": "pixels",
+        "description": "Window button width in the panel",
+        "dependency": "panel-show-label",
+        "value": 150
+    },
+    "buttons-use-entire-space": {
+        "type": "switch",
+        "default": false,
+        "description": "Window buttons can have different sizes and use the entire space available",
+        "dependency": "panel-show-label",
+        "value": false
+    },
+    "window-hover": {
+        "type": "radiogroup",
+        "default": "thumbnail",
+        "description": "Choose what to show when hovering over a window button",
+        "options": {
+            "Nothing": "nothing",
+            "Title": "title",
+            "Thumbnail": "thumbnail"
+        },
+        "value": "thumbnail"
+    },
+    "window-preview-show-label": {
+        "type": "switch",
+        "default": true,
+        "description": "Show title above thumbnail",
+        "dependency": "window-hover=thumbnail",
+        "value": true
+    },
+    "window-preview-scale": {
+        "type": "radiogroup",
+        "default": 1,
+        "description": "Thumbnail size",
+        "options": {
+            "Small": 0.75,
+            "Medium": 1,
+            "Large": 1.25,
+            "Largest": 1.5
+        },
+        "dependency": "window-hover=thumbnail",
+        "value": 1
+    },
+    "last-window-order": {
+        "type": "generic",
+        "default": "",
+        "value": "73400363::54526253::56623909::71306059::79691783"
+    },
+    "__md5__": "ae7e62426953eb3b7c5103050ae4d575"
+}
