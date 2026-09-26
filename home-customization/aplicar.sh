@@ -9,10 +9,21 @@ source config.sh
 # Install #
 ###########
 
-cd "${customStuffDirectory}"
+mkdir -p "${HOME}"/.themes
+mkdir -p "${HOME}"/.icons
+mkdir -p "${HOME}"/.fonts
+mkdir -p "${HOME}"/.local/share/wallpapers
+mkdir -p "${HOME}"/.local/share/cinnamon/extensions
+mkdir -p "${HOME}"/.config/cinnamon/spices
 
-cp --recursive --verbose --update . "${homeDirectory}"
-# -n => --never-overwrite; -d => --target-directory
+cp -ru "${gtkThemesDir}"/\* "${HOME}"/.themes
+cp -ru "${iconThemesDir}"/\* "${HOME}"/.icons
+cp -ru "${cursorsDir}"/\* "${HOME}"/.icons
+cp -ru "${fontsDir}"/\* "${HOME}"/.fonts
+cp -ru "${wallpapersDir}"/\* "${HOME}"/.local/share/wallpapers
+cp -ru "${extensionsDir}"/\* "${HOME}"/.local/share/cinnamon/extensions
+cp -ru "${extensionsConfigDir}"/\* "${HOME}"/.config/cinnamon/spices
+
 unzip -n ./.icons/\*.zip -d "${homeDirectory}"/.icons/
 unzip -n ./.themes/\*.zip -d "${homeDirectory}"/.themes/
 unzip -n ./.fonts/\*.zip -d "${homeDirectory}"/.fonts/
@@ -36,7 +47,9 @@ gsettings set org.nemo.desktop font "${fontName} ${fontSize}"
 
 # Behavior
 printf "Debug: Applying desktop behavior\n"
-gsettings set org.cinnamon enabled-extensions "${enabledExtensions}"
+if [[ ${shouldApplyExtensions} = "True" ]]; then
+        gsettings set org.cinnamon enabled-extensions "${enabledExtensions}"
+fi
 gsettings set org.cinnamon.desktop.wm.preferences focus-mode ${mouseFocusMode}
 gsettings set org.cinnamon.desktop.wm.preferences resize-with-right-button ${altRightClickResizes}
 

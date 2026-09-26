@@ -6,8 +6,24 @@
 
 # Esse arquivo não foi gerado por gerarConfig.sh.
 
-customStuffDirectory="custom"
-homeDirectory="${HOME}"
+gtkThemesDir="./custom/Temas"
+iconThemesDir="./custom/Icones"
+cursorsDir="./custom/Cursores"
+fontsDir="./custom/Fontes"
+wallpapersDir="./custom/Wallpaper"
+extensionsDir="./custom/Extensoes"
+extensionsConfigDir="./custom/Extensoes/Configuracoes"
+
+gtkTheme="Skeuos-Blue-Dark"
+
+iconTheme="breeze-chameleon-dark"
+
+cursor="Bibata-Modern-Classic"
+
+fontName="SF Pro Text"
+fontSize="9"
+
+wallpaper="wp12568410-night-mountains-4k-wallpapers.jpg"
 
 panelPosition="top"
 panelHeight="47"
@@ -15,23 +31,6 @@ panelHeight="47"
 mouseFocusMode="sloppy"
 altRightClickResizes="true"
 
-# Arquivos em custom/.fonts
-fontName="SF Pro Text"
-fontSize="9"
-
-# Arquivos em custom/.icons
-iconTheme="breeze-chameleon-dark"
-
-# Arquivos em custom/.themes
-gtkTheme="Skeuos-Blue-Dark"
-
-# Arquivos em custom/.local/share/wallpapers
-wallpaper="wp12568410-night-mountains-4k-wallpapers.jpg"
-
-# Arquivos em custom/.icons
-cursor="Bibata-Modern-Classic"
-
-# Arquivos em custom/.local/share/cinnamon/extensions
 enabledExtensions="['watermark@germanfr','mouse-shake-zoom@rcalixte','dim-inactive-windows@jark',
 'compiz-windows-effect@hermes83.github.com','BlurCinnamon@klangman']"
 

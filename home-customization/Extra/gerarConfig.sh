@@ -1,5 +1,9 @@
 #!/bin/bash
 
+removeFileExtension() {
+        printf "${1%.*}"
+}
+
 cd ..
 source config.sh
 
@@ -16,14 +20,14 @@ pathToFiles=(
 )
 prompt=(
 "Papel de Parede"
-"Ícones (cuidado para não escolher um cursor)"
-"Cursor (cuidado para não escolher um tema de ícones)"
+"Ícones"
+"Cursor"
 "Fonte do sistema"
 "Tema das janelas"
 )
 promptExtra=(
 "Tamanho da fonte (normal=10)"
-"Posição do painel (up/down/left/right)"
+"Posição do painel (top/bottom/left/right)"
 "Altura do painel (normal=40)"
 "Modo de foco do mouse (click/sloppy)"
 "Alt+Mouse2 redimensiona janela (true/false)"
@@ -43,7 +47,7 @@ for ((i=0; i<${#pathToFiles[*]}; i+=1)); do
         else
                 query+=("")
         fi
-        printf "query: ${query[*]}\noption: ${option}\n"
+        printf "\n"
 done
 
 clear
@@ -59,8 +63,11 @@ if [[ ${option} = "s" ]]; then
         done
 fi
 
-read -p "EM TESTES -- Carregar extensões? (S/n): " shouldApplyExtensions
-[[ shouldApplyExtensions != "n" ]] && shouldApplyExtensions="True"
+read -p "Carregar extensões? (S/n): " option
+shouldApplyExtensions="True"
+if [[ ${option} = "n" ]]; then
+        shouldApplyExtensions="False"
+fi
 
 clear
 for ((i=0; i<${#query[*]}; i+=1)); do
@@ -73,7 +80,7 @@ read -p "Está correto? (S/n): " option
 
 [[ -n ${query[0]} ]] && wallpaper="${query[0]}"
 [[ -n ${query[1]} ]] && iconTheme="${query[1]}"
-[[ -n ${query[2]} ]] && cursor="${query[2]}"
+[[ -n ${query[2]} ]] && cursor="$(removeFileExtension ${query[2]})"
 [[ -n ${query[3]} ]] && fontName="${query[3]}"
 [[ -n ${query[4]} ]] && gtkTheme="${query[4]}"
 [[ -n ${query[5]} ]] && fontSize="${query[5]}"
@@ -134,6 +141,6 @@ ${s}panel1:right:14:calendar@cinnamon.org:13${s},
 ${s}panel1:left:1:panel-launchers@cinnamon.org:15${s},
 ${s}panel1:center:0:window-list@cinnamon.org:16${s}, ${s}panel1:right:1:xrandr@cinnamon.org:17${s},
 ${s}panel1:left:2:show-desktop@cinnamon.org:18${s}]${d}
-" > config.sh
+" > testy.sh
 printf "Arquivo de configuração gerado."
 exit

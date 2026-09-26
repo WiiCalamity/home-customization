@@ -1,0 +1,3 @@
+Jogue seus arquivos nas subpastas correspondentes.
+
+O arquivo que você quer adicionar deve estar compactado no formato ".zip" e dentro desse .zip deve haver uma subpasta com o nome idêntico ao .zip parente.
