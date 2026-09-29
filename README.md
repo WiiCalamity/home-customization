@@ -20,7 +20,7 @@ Você pode editar diretamente o arquivo _config.sh_ para que ele se lembre da su
 ## Dúvidas?
 #### Como que eu executo um arquivo .sh?  
 Basta dar um clique duplo e apertar no botão "Executar". Se quiser abrir o terminal junto, aperta em "Executar no terminal".  
-![Clique duplo, depois "executar"](.git/image/run.png)
+![Clique duplo, depois "executar"](image/run.png)
 
 
 #### Os arquivos não querem abrir. O que eu faço?  
@@ -28,8 +28,8 @@ O Linux está restringindo eles. Você precisa conceder aos arquivos a permissã
 1. Dentro da pasta home-customization, dê um clique direto em qualquer lugar.
 2. Clique em "Abrir no terminal".
 3. No terminal, digite "chmod --recursive +x .".  
-![Abrir no terminal](.git/image/chmod1.png)  
-![Alterar permissão](.git/image/chmod2.png)  
+![Abrir no terminal](image/chmod1.png)  
+![Alterar permissão](image/chmod2.png)  
 
 ## Créditos
 Software disponível nesse repositório. Nenhum foi modificado.
