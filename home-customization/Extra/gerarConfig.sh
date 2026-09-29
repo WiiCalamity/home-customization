@@ -4,6 +4,10 @@ removeFileExtension() {
         printf "${1%.*}"
 }
 
+listNumbered() {
+        printf "${1}" | nl
+}
+
 cd ..
 source config.sh
 
@@ -34,16 +38,16 @@ promptExtra=(
 )
 
 for ((i=0; i<${#pathToFiles[*]}; i+=1)); do
-        #clear
-        myFiles=$(ls -1 "${pathToFiles[${i}]}")
-        numOfFiles=$(($(printf "${myFiles}" | wc --lines)+1))
+        clear
+        fileNames=$(ls -1 "${pathToFiles[${i}]}")
+        numOfFiles=$(($(printf "${fileNames}" | wc --lines)+1))
 
         printf "${BOLD}${prompt[${i}]}\n(<Enter> = não alterar)${NORMAL}\n"
-        printf "${myFiles}" | nl # nl: numerar linhas
+        printf "${fileNames}" | nl # nl: numerar linhas
         read -p "Número: " option
 
         if [[ ${option} -ge 1 ]] && [[ ${option} -le ${numOfFiles} ]]; then
-                query+=($(printf "${myFiles}" | sed "${option}q;d"))
+                query+=($(printf "${fileNames}" | sed "${option}q;d"))
         else
                 query+=("")
         fi

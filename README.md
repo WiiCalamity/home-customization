@@ -1,10 +1,12 @@
+
+> Importante!
+> Você precisa permitir a execução dos arquivos para que eles funcionem.
+> Leia as "Dúvidas" abaixo.
+
 ## Home Customization
 Programa para mudar a interface do computador da escola.  
 
 Eu escrevi somente os programas em BASH. Os temas, ícones, papéis de parede, etc., não são meus.  
-
-**Você provavelmente precisa configurar algumas permissões antes de usar.  
-Leia as "Dúvidas?" abaixo.**  
 
 Home Customization ainda está em desenvolvimento.  
 
@@ -13,28 +15,21 @@ Todos os parâmetros da customização -- ícones, cursor, papel de parede... --
 
 Para aplicar a customização ao Cinnamon, simplesmente execute o arquivo _aplicar.sh_, o qual lê o que está definido no _config.sh_.  
 
-Você pode editar diretamente o arquivo _config.sh_ para que ele se lembre da sua configuração, que então será carregada por _aplicar.sh_.  
-
-Alternativamente você pode rodar o arquivo _gerarConfig.sh_ pelo terminal para ter uma experiência interativa. Ele está localizado no diretório "Extra". **EM TESTES.**  
-
+Você pode editar diretamente o arquivo _config.sh_ para que ele se lembre da sua configuração ou rodar o arquivo _gerarConfig.sh_ pelo terminal para uma experiência interativa.
 
 ## Dúvidas?
 #### Como que eu executo um arquivo .sh?  
 Basta dar um clique duplo e apertar no botão "Executar". Se quiser abrir o terminal junto, aperta em "Executar no terminal".  
+![Clique duplo, depois "executar"](.git/image/run.png)
+
 
 #### Os arquivos não querem abrir. O que eu faço?  
 O Linux está restringindo eles. Você precisa conceder aos arquivos a permissão de execução.  
 1. Dentro da pasta home-customization, dê um clique direto em qualquer lugar.
 2. Clique em "Abrir no terminal".
 3. No terminal, digite "chmod --recursive +x .".  
-
-O que o comando significa:  
-chmod: alterar permissões  
---recursive: alterar recursivamente (todas as subpastas)  
-+x: adicionar permissão de executar  
-.: significa diretório atual (home-customization)  
-
-
+![Abrir no terminal](.git/image/chmod1.png)  
+![Alterar permissão](.git/image/chmod2.png)  
 
 ## Créditos
 Software disponível nesse repositório. Nenhum foi modificado.
@@ -53,3 +48,6 @@ https://github.com/daniruiz/skeuos-gtk - licença GPL-3.0
 
 Pacote de ícones:  
 https://github.com/L4ki/Breeze-Chameleon-Icons - licença GPL-3.0  
+
+Cursor:
+https://github.com/ful1e5/Bibata_Cursor - licença GPL-3.0
