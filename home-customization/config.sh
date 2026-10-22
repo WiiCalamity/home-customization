@@ -1,18 +1,28 @@
 #!/bin/bash
 
-# Edite esse arquivo manualmente para salvar a customização que você deseja.
+# Edite esse arquivo manualmente para salvar a Customizacaoização que você deseja.
 # Alternativamente, execute o arquivo gerarConfig.sh localizado em Extra
 # para uma experiência interativa.
 
 # Esse arquivo não foi gerado por gerarConfig.sh.
 
-gtkThemesDir="./custom/Temas"
-iconThemesDir="./custom/Icones"
-cursorsDir="./custom/Cursores"
-fontsDir="./custom/Fontes"
-wallpapersDir="./custom/Wallpaper"
-extensionsDir="./custom/Extensoes"
-extensionsConfigDir="./custom/Extensoes/Configuracoes"
+gtkThemesDir="./Customizacao/Temas"
+iconThemesDir="./Customizacao/Icones"
+cursorsDir="./Customizacao/Cursores"
+fontsDir="./Customizacao/Fontes"
+wallpapersDir="./Customizacao/Wallpaper"
+extensionsDir="./Customizacao/Extensoes"
+extensionsConfigDir="./Customizacao/Extensoes/Configuracoes"
+appletsDir="./Customizacao/Applets"
+
+userGtkThemesDir="${HOME}/.themes"
+userIconsDir="${HOME}/.icons"
+userCursorsDir="${HOME}/.icons"
+userFontsDir="${HOME}/.fonts"
+userWallpapersDir="${HOME}/.local/share/wallpapers"
+userExtensionsDir="${HOME}/.local/share/cinnamon/extensions"
+userExtensionsConfigDir="${HOME}/.config/cinnamon/spices"
+userAppletsDir="${HOME}/.config/cinnamon/spices"
 
 gtkTheme="Skeuos-Blue-Dark"
 
@@ -35,7 +45,7 @@ enabledExtensions="['watermark@germanfr','mouse-shake-zoom@rcalixte','dim-inacti
 'compiz-windows-effect@hermes83.github.com','BlurCinnamon@klangman']"
 
 # Usar o detect.sh para modificar esse aqui
-panelApplets="['panel1:left:0:menu@cinnamon.org:0', 'panel1:right:4:systray@cinnamon.org:3',
+enabledApplets="['panel1:left:0:menu@cinnamon.org:0', 'panel1:right:4:systray@cinnamon.org:3',
 'panel1:right:8:removable-drives@cinnamon.org:7', 'panel1:right:9:keyboard@cinnamon.org:8',
 'panel1:right:11:network@cinnamon.org:10', 'panel1:right:12:sound@cinnamon.org:11',
 'panel1:right:14:calendar@cinnamon.org:13', 'panel1:left:1:panel-launchers@cinnamon.org:15',

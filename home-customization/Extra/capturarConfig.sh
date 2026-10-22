@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Captura sua customização atual e a salva em config.sh.
+# Em progresso.
+
 iconTheme="$(gsettings get org.cinnamon.desktop.interface icon-theme)"
 gtkTheme="$(gsettings get org.cinnamon.desktop.interface gtk-theme)"
 unknown1="$(gsettings get org.cinnamon.theme name)"

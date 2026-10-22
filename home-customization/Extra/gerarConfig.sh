@@ -1,5 +1,16 @@
 #!/bin/bash
 
+clear
+printf "===========================================================================  \n"
+printf "                               ______            _____              __       \n"
+printf "   ____ ____  _________ ______/ ____/___  ____  / __(_)___ _  _____/ /_      \n"
+printf "  / __ \`/ _ \/ ___/ __ \`/ ___/ /   / __ \/ __ \/ /_/ / __ \`/ / ___/ __ \  \n"
+printf " / /_/ /  __/ /  / /_/ / /  / /___/ /_/ / / / / __/ / /_/ / (__  ) / / /     \n"
+printf " \__, /\___/_/   \__,_/_/   \____/\____/_/ /_/_/ /_/\__, (_)____/_/ /_/      \n"
+printf "/____/                                             /____/                    \n"
+printf "===========================================================================  \n\n"
+
+
 removeFileExtension() {
         printf "${1%.*}"
 }
@@ -38,7 +49,6 @@ promptExtra=(
 )
 
 for ((i=0; i<${#pathToFiles[*]}; i+=1)); do
-        clear
         fileNames=$(ls -1 "${pathToFiles[${i}]}")
         numOfFiles=$(($(printf "${fileNames}" | wc --lines)+1))
 
@@ -98,31 +108,32 @@ s=\'
 printf "\
 #!/bin/bash
 
-# ESSE ARQUIVO FOI GERADO AUTOMATICAMENTE POR gerarConfig.sh.
-# O config.sh original está disponível na pasta Extra.
-
 # Edite esse arquivo manualmente para salvar a customização que você deseja.
 # Alternativamente, execute o arquivo gerarConfig.sh localizado em Extra
 # para uma experiência interativa.
 
-# Arquivos em custom/.local/share/wallpapers
-wallpaper=${d}${wallpaper}${d}
+# ESSE ARQUIVO FOI GERADO AUTOMATICAMENTE POR gerarConfig.sh.
+# O config.sh original está disponível na pasta Extra.
 
-# Arquivos em custom/.icons
-iconTheme=${d}${iconTheme}${d}
+gtkThemesDir=${d}./Customizacao/Temas${d}
+iconThemesDir=${d}./Customizacao/Icones${d}
+cursorsDir=${d}./Customizacao/Cursores${d}
+fontsDir=${d}./Customizacao/Fontes${d}
+wallpapersDir=${d}./Customizacao/Wallpaper${d}
+extensionsDir=${d}./Customizacao/Extensoes${d}
+extensionsConfigDir=${d}./Customizacao/Extensoes/Configuracoes${d}
+appletsDir=${d}./Customizacao/Applets${d}
 
-# Arquivos em custom/.icons
+gtkTheme=${d}${gtkTheme}${d}
+
+iconTheme=${d}b${iconTheme}${d}
+
 cursor=${d}${cursor}${d}
 
-# Arquivos em custom/.fonts
 fontName=${d}${fontName}${d}
 fontSize=${d}${fontSize}${d}
 
-# Arquivos em custom/.themes
-gtkTheme=${d}${gtkTheme}${d}
-
-customStuffDirectory=${d}custom${d}
-homeDirectory=${d}${HOME}${d}
+wallpaper=${d}${wallpaper}${d}
 
 panelPosition=${d}${panelPosition}${d}
 panelHeight=${d}${panelHeight}${d}
@@ -130,21 +141,10 @@ panelHeight=${d}${panelHeight}${d}
 mouseFocusMode=${d}${mouseFocusMode}${d}
 altRightClickResizes=${d}${altRightClickResizes}${d}
 
-# Arquivos em custom/.local/share/cinnamon/extensions
-enabledExtensions=${d}[${s}watermark@germanfr${s},${s}mouse-shake-zoom@rcalixte${s},
-${s}dim-inactive-windows@jark${s},
-${s}compiz-windows-effect@hermes83.github.com${s},${s}BlurCinnamon@klangman${s}]${d}
+enabledExtensions=${d}${enabledExtensions}${d}
 
 # Usar o detect.sh para modificar esse aqui
-panelApplets=${d}[${s}panel1:left:0:menu@cinnamon.org:0${s},
-${s}panel1:right:4:systray@cinnamon.org:3${s},
-${s}panel1:right:8:removable-drives@cinnamon.org:7${s},
-${s}panel1:right:9:keyboard@cinnamon.org:8${s},
-${s}panel1:right:11:network@cinnamon.org:10${s}, ${s}panel1:right:12:sound@cinnamon.org:11${s},
-${s}panel1:right:14:calendar@cinnamon.org:13${s},
-${s}panel1:left:1:panel-launchers@cinnamon.org:15${s},
-${s}panel1:center:0:window-list@cinnamon.org:16${s}, ${s}panel1:right:1:xrandr@cinnamon.org:17${s},
-${s}panel1:left:2:show-desktop@cinnamon.org:18${s}]${d}
+enabledApplets=${d}${enabledApplets}${d}
 " > testy.sh
 printf "Arquivo de configuração gerado."
 exit

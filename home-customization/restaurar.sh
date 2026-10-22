@@ -3,8 +3,7 @@
 # Só funciona nos computadores da escola... por enquanto.
 
 # Restore applets
-cp -r default/.config/* ${HOME}/.config/
-
+cp -r ./Padrao/Applets/* ${HOME}/.config/cinnamon/spices
 # Restore general theme
 gsettings set org.cinnamon.desktop.interface icon-theme 'Mint-L'
 gsettings set org.cinnamon.desktop.interface gtk-theme 'Mint-L'

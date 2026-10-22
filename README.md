@@ -11,11 +11,11 @@ Eu escrevi somente os programas em BASH. Os temas, ícones, papéis de parede, e
 Home Customization ainda está em desenvolvimento.  
 
 ## Como funciona?
-Todos os parâmetros da customização -- ícones, cursor, papel de parede... -- estão salvos no arquivo _config.sh_.  
+Todos os parâmetros da customização -- ícones, cursor, papel de parede... -- estão salvos no arquivo `config.sh`.  
 
-Para aplicar a customização ao Cinnamon, simplesmente execute o arquivo _aplicar.sh_, o qual lê o que está definido no _config.sh_.  
+Para aplicar a customização ao Cinnamon, simplesmente execute o arquivo `aplicar.sh`, o qual lê o que está definido no `config.sh`.  
 
-Você pode editar diretamente o arquivo _config.sh_ para que ele se lembre da sua configuração ou rodar o arquivo _gerarConfig.sh_ pelo terminal para uma experiência interativa.
+Você pode editar diretamente o arquivo `config.sh` para que ele se lembre da sua configuração ou rodar o arquivo `gerarConfig.sh` pelo terminal para uma experiência interativa.
 
 ## Dúvidas?
 #### Como que eu executo um arquivo .sh?  
@@ -27,7 +27,7 @@ Basta dar um clique duplo e apertar no botão "Executar". Se quiser abrir o term
 O Linux está restringindo eles. Você precisa conceder aos arquivos a permissão de execução.  
 1. Dentro da pasta home-customization, dê um clique direto em qualquer lugar.
 2. Clique em "Abrir no terminal".
-3. No terminal, digite "chmod --recursive +x .".  
+3. No terminal, digite `chmod --recursive +x .`.  
 ![Abrir no terminal](image/chmod1.png)  
 ![Alterar permissão](image/chmod2.png)  
 
@@ -50,4 +50,4 @@ Pacote de ícones:
 https://github.com/L4ki/Breeze-Chameleon-Icons - licença GPL-3.0  
 
 Cursor:
-https://github.com/ful1e5/Bibata_Cursor - licença GPL-3.0
+https://github.com/ful1e5/Bibata`Cursor - licença GPL-3.0

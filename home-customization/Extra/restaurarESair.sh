@@ -2,9 +2,9 @@
 ls
 echo 1
 (
-exec ./restore.sh
+exec ../restore.sh
 )
 wait $!
 echo hiii
-sleep 1
+sleep 5
 poweroff
