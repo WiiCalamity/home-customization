@@ -73,9 +73,6 @@ gsettings set org.cinnamon panels-height "['1:${panelHeight}', '']" # 2nd is dum
 gsettings set org.cinnamon panels-enabled "['1:0:${panelPosition}', '']"
 gsettings set org.cinnamon enabled-applets "${panelApplets}"
 
-# Night Light
-redshift -l 0:0 -t 3600:3600 &
-
 printf "Applied!\n"
 
 ########

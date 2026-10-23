@@ -35,14 +35,14 @@ fontSize="9"
 
 wallpaper="wp12568410-night-mountains-4k-wallpapers.jpg"
 
-panelPosition="top"
+panelPosition="bottom"
 panelHeight="47"
 
 mouseFocusMode="sloppy"
 altRightClickResizes="true"
 
 enabledExtensions="['watermark@germanfr','mouse-shake-zoom@rcalixte','dim-inactive-windows@jark',
-'compiz-windows-effect@hermes83.github.com','BlurCinnamon@klangman']"
+'compiz-windows-effect@hermes83.github.com']"
 
 # Usar o detect.sh para modificar esse aqui
 enabledApplets="['panel1:left:0:menu@cinnamon.org:0', 'panel1:right:4:systray@cinnamon.org:3',
