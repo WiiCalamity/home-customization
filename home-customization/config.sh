@@ -6,6 +6,40 @@
 
 # Esse arquivo não foi gerado por gerarConfig.sh.
 
+gtkTheme="Skeuos-Blue-Dark"
+
+iconTheme="breeze-chameleon-dark"
+
+cursor="Bibata-Modern-Classic"
+
+fontName="SF Pro Text"
+# Padrão=10
+fontSize="9"
+
+# Nome do arquivo em ./Customizacao/Wallpaper
+wallpaper="wp12568410-night-mountains-4k-wallpapers.jpg"
+
+# top/bottom/left/right
+panelPosition="bottom"
+# Padrão=40
+panelHeight="47"
+
+# click/sloppy
+mouseFocusMode="sloppy"
+# true/false
+altRightClickResizes="true"
+
+# DIA:NOITE ou off. Ex: 4000:3600
+nightlightTemperature="off"
+
+enabledExtensions="['watermark@germanfr','mouse-shake-zoom@rcalixte','dim-inactive-windows@jark',
+'compiz-windows-effect@hermes83.github.com']"
+
+# Usar o detect.sh para modificar esse aqui
+enabledApplets="['panel1:left:0:menu@cinnamon.org:0', 'panel1:right:4:systray@cinnamon.org:3', 'panel1:right:8:removable-drives@cinnamon.org:7', 'panel1:right:9:keyboard@cinnamon.org:8', 'panel1:right:11:network@cinnamon.org:10', 'panel1:right:12:sound@cinnamon.org:11', 'panel1:right:14:calendar@cinnamon.org:13', 'panel1:left:1:panel-launchers@cinnamon.org:15', 'panel1:center:0:window-list@cinnamon.org:16', 'panel1:right:1:xrandr@cinnamon.org:17', 'panel1:left:2:show-desktop@cinnamon.org:18']"
+
+# ------------------------------- #
+# Não precisa mexer nesses abaixo
 gtkThemesDir="./Customizacao/Temas"
 iconThemesDir="./Customizacao/Icones"
 cursorsDir="./Customizacao/Cursores"
@@ -23,31 +57,3 @@ userWallpapersDir="${HOME}/.local/share/wallpapers"
 userExtensionsDir="${HOME}/.local/share/cinnamon/extensions"
 userExtensionsConfigDir="${HOME}/.config/cinnamon/spices"
 userAppletsDir="${HOME}/.config/cinnamon/spices"
-
-gtkTheme="Skeuos-Blue-Dark"
-
-iconTheme="breeze-chameleon-dark"
-
-cursor="Bibata-Modern-Classic"
-
-fontName="SF Pro Text"
-fontSize="9"
-
-wallpaper="wp12568410-night-mountains-4k-wallpapers.jpg"
-
-panelPosition="bottom"
-panelHeight="47"
-
-mouseFocusMode="sloppy"
-altRightClickResizes="true"
-
-enabledExtensions="['watermark@germanfr','mouse-shake-zoom@rcalixte','dim-inactive-windows@jark',
-'compiz-windows-effect@hermes83.github.com']"
-
-# Usar o detect.sh para modificar esse aqui
-enabledApplets="['panel1:left:0:menu@cinnamon.org:0', 'panel1:right:4:systray@cinnamon.org:3',
-'panel1:right:8:removable-drives@cinnamon.org:7', 'panel1:right:9:keyboard@cinnamon.org:8',
-'panel1:right:11:network@cinnamon.org:10', 'panel1:right:12:sound@cinnamon.org:11',
-'panel1:right:14:calendar@cinnamon.org:13', 'panel1:left:1:panel-launchers@cinnamon.org:15',
-'panel1:center:0:window-list@cinnamon.org:16', 'panel1:right:1:xrandr@cinnamon.org:17',
-'panel1:left:2:show-desktop@cinnamon.org:18']"

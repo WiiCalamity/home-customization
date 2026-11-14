@@ -14,6 +14,7 @@ printf "    /_/                                      \n\n";
 printf "==============================================\n\n";
 
 source config.sh
+source Extra/wiiConfig.sh
 
 ###########
 # Install #
@@ -73,6 +74,9 @@ gsettings set org.cinnamon panels-height "['1:${panelHeight}', '']" # 2nd is dum
 gsettings set org.cinnamon panels-enabled "['1:0:${panelPosition}', '']"
 gsettings set org.cinnamon enabled-applets "${panelApplets}"
 
+# Night light
+printf "Debug: enabling redshift\n"
+[[ "${nightlightTemperature}" != "off" ]] && redshift -l 0:0 -t "${nightlightTemperature}" &
 printf "Applied!\n"
 
 ########
